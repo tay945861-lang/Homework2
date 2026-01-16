@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Light ON OFF</title>
+</head>
+<body style="text-align:center;">
+
+<h2>Turn ON / OFF the Light</h2>
+
+<img id="light" src="https://www.w3schools.com/js/pic_bulboff.gif" width="100">
+
+<br><br>
+
+<button onclick="toggleLight()">Turn ON</button>
+
+<script>
+  let isOn = false;
+
+  function toggleLight() {
+    const light = document.getElementById("light");
+    const button = event.target;
+
+    if (isOn) {
+      light.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+      button.innerText = "Turn ON";
+    } else {
+      light.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+      button.innerText = "Turn OFF";
+    }
+
+    isOn = !isOn;
+  }
+</script>
+
+</body>
+</html>
